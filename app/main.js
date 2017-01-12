@@ -1,9 +1,7 @@
 const {app, BrowserWindow} = require('electron')
 
-//require('crash-reporter').start();
-
 function createWindow(){
-  mainWindow = new BrowserWindow({width: 600, height: 800})
+  let mainWindow = new BrowserWindow({width: 600, height: 800})
   mainWindow.loadURL('file://' + __dirname + '/index.html')
   mainWindow.on('closed', () => {
     mainWindow = null;
