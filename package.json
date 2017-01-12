@@ -8,8 +8,9 @@
   "description": "App creation to learn electron and node basics",
   "main": "bootstrapper.js",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-packager . --icon=images/sample_icon --overwrite"
+    "start": "./node_modules/.bin/electron .",
+    "build": "electron-packager . --icon=images/sample_icon --overwrite",
+    "webpack-build": "./node_modules/.bin/webpack --config webpack.config.js"
   },
   "keywords": [
     "learning"
@@ -17,11 +18,14 @@
   "author": "Joan Maeso",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babel-register": "^6.18.0",
     "electron-packager": "^8.4.0",
-    "electron-prebuilt": "^1.4.13"
+    "electron-prebuilt": "^1.4.13",
+    "webpack": "^1.14.0"
   },
   "dependencies": {
     "react": "^15.4.2",
