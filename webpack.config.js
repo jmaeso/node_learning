@@ -12,12 +12,12 @@ module.exports = {
   },
 
   context: __dirname + '/app',
-  entry: ['./something.js'],
+  entry: ['./titleScreen.js'],
 
   output: {
     path: __dirname + '/build',
     filename: 'bundle.js'
   },
 
-  target: 'electron'
+  target: 'electron-renderer'
 };

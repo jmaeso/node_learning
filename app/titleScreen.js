@@ -1,7 +1,6 @@
 const React = require("react");
 const ReactDOM = require("react-dom");
-const vaaa = require('./testfunction.js')
-console.log(vaaa(1))
+//const styles = require('./titleScreen.css');
 
 function formatName(user) {
   return user.firstName + ' ' + user.lastName;
@@ -12,13 +11,15 @@ const user = {
   lastName: 'Perez'
 };
 
-const element = (
-  <h1>
-    Hello, {formatName(user)}!
-  </h1>
+const background = (
+  //<div className={styles.container}>
+    <h1>
+      Hello, {formatName(user)}!
+    </h1>
+  //</div>
 );
 
 ReactDOM.render(
-  element,
-  document.getElementById('content')
+  background,
+  document.getElementById('root')
 );
