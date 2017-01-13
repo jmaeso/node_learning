@@ -1,3 +1,8 @@
+const React = require("react");
+const ReactDOM = require("react-dom");
+const vaaa = require('./testfunction.js')
+console.log(vaaa(1))
+
 function formatName(user) {
   return user.firstName + ' ' + user.lastName;
 }

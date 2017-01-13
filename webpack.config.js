@@ -12,7 +12,7 @@ module.exports = {
   },
 
   context: __dirname + '/app',
-  entry: './main.js',
+  entry: ['./something.js'],
 
   output: {
     path: __dirname + '/build',
