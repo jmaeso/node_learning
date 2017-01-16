@@ -5,7 +5,8 @@ class Search extends React.Component {
   render() {
     return (
       <form onSubmit={this.props.handleSubmit}>
-        <input type="text" value={this.props.searchValue} onChange={this.props.handleChange} />
+        <input type="text"  value={this.props.searchValue}
+                            onChange={this.props.inputChange} />
         <input type="submit" />
       </form>
     );
