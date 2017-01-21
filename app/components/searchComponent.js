@@ -4,11 +4,9 @@ import React  from 'react';
 class Search extends React.Component {
   render() {
     return (
-      <form onSubmit={this.props.handleSubmit}>
-        <input type="text"  value={this.props.searchValue}
-                            onChange={this.props.inputChange} />
-        <input type="submit" />
-      </form>
+      <input type="file" accept=".apk, .app"
+        value={this.props.searchValue}
+        onChange={this.props.inputChange} />
     );
   }
 }

@@ -16,7 +16,8 @@ module.exports = {
 
   output: {
     path: __dirname + '/build',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: 'http://localhost:8080/build/'
   },
 
   target: 'electron-renderer'

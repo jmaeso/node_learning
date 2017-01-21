@@ -8,9 +8,12 @@
   "description": "App creation to learn electron and node basics",
   "main": "./app/main.js",
   "scripts": {
-    "start": "./node_modules/.bin/electron .",
+    "start": "ENVIRONMENT=DEV ./node_modules/.bin/electron .",
     "build": "electron-packager . --icon=images/sample_icon --overwrite",
-    "webpack-build": "./node_modules/.bin/webpack --config webpack.config.js"
+    "webpack-build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "dev": "npm run watch & sleep 3 && npm run start",
+    "kill-webpack": "pkill -f ./node_modules/.bin/webpack-dev-server",
+    "watch": "npm run kill-webpack ; ./node_modules/.bin/webpack-dev-server --hot --inline"
   },
   "keywords": [
     "learning"
@@ -25,11 +28,13 @@
     "css-loader": "^0.26.1",
     "electron-packager": "^8.4.0",
     "electron-prebuilt": "^1.4.13",
-    "webpack": "^1.14.0"
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "electron": "^1.4.14",
     "react": "^15.4.2",
+    "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2"
   }
 }
