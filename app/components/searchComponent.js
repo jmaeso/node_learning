@@ -1,14 +1,13 @@
-
 import React  from 'react';
 
-class Search extends React.Component {
+class FilePicker extends React.Component {
   render() {
     return (
-      <input type="file" accept=".apk, .app"
+      <input type="file"
         value={this.props.searchValue}
         onChange={this.props.inputChange} />
     );
   }
 }
 
-export default Search
+export default FilePicker

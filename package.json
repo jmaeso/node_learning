@@ -9,9 +9,9 @@
   "main": "./app/main.js",
   "scripts": {
     "start": "ENVIRONMENT=DEV ./node_modules/.bin/electron .",
-    "build": "electron-packager . --icon=images/sample_icon --overwrite",
+    "build": "ENVIRONMENT=PRO npm run webpack-build && ./node_modules/.bin/electron-packager . AutomationCenter --overwrite --icon=images/sample_icon --out=dist",
     "webpack-build": "./node_modules/.bin/webpack --config webpack.config.js",
-    "dev": "npm run watch & sleep 3 && npm run start",
+    "dev": "npm run watch & sleep 4 && npm run start",
     "kill-webpack": "pkill -f ./node_modules/.bin/webpack-dev-server",
     "watch": "npm run kill-webpack ; ./node_modules/.bin/webpack-dev-server --hot --inline"
   },
@@ -28,6 +28,7 @@
     "css-loader": "^0.26.1",
     "electron-packager": "^8.4.0",
     "electron-prebuilt": "^1.4.13",
+    "style-loader": "^0.13.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },

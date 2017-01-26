@@ -1,7 +1,6 @@
 const React = require("react");
-//const ReactDOM = require("react-dom");
-//const styles = require('./titleScreen.css');
-import Search from '../components/searchComponent.js';
+import styles from '../style.css';
+import FilePicker from '../components/searchComponent.js';
 import Switch from '../components/switchComponent.js';
 
 class FormContainer extends React.Component {
@@ -35,16 +34,13 @@ class FormContainer extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <label>Platform: </label>
-          <Switch   selectChange={this.selectChange.bind(this)}
-                    selectValue={this.state.selectValue} />
-        </div>
-        <Search
-          handleSubmit={this.handleSubmit.bind(this)}
-          inputChange={this.inputChange.bind(this)}
-          searchValue={this.state.inputValue} />
+      <div className={styles.centerer}>
+        <label>Platform: </label>
+        <Switch selectChange={this.selectChange.bind(this)}
+                selectValue={this.state.selectValue} />
+        <FilePicker handleSubmit={this.handleSubmit.bind(this)}
+                inputChange={this.inputChange.bind(this)}
+                searchValue={this.state.inputValue} />
       </div>
     );
   }
